@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:paddingBottom="@dimen/activity_vertical_margin"
+              android:paddingLeft="@dimen/activity_horizontal_margin"
+              android:paddingRight="@dimen/activity_horizontal_margin"
+              android:paddingTop="@dimen/activity_vertical_margin"
+              android:orientation="vertical"
+              android:gravity="center"
+              tools:context=".features.login.LoginFragment">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:elevation="15dp" >
+        <EditText
+            android:layout_margin="4dp"
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:nextFocusDown="@+id/password"
+            android:textColor="#333"
+            android:singleLine="true"
+            android:textColorHint="#666"
+            android:textSize="15sp" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:elevation="15dp" >
+        <EditText
+            android:layout_margin="4dp"
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="Password"
+            android:textColor="#333"
+            android:singleLine="true"
+            android:imeOptions="actionDone"
+            android:textColorHint="#666"
+            android:textSize="15sp" />
+    </android.support.v7.widget.CardView>
+
+    <com.dd.CircularProgressButton
+        android:id="@+id/btnLogin"
+        android:layout_width="196dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/cpb_white"
+        android:textSize="18sp"
+        app:cpb_textComplete="Success!"
+        app:cpb_textError="Error!"
+        app:cpb_textIdle="Login" />
+
+</LinearLayout>
